@@ -7,9 +7,9 @@ WORKDIR /app
 # Install Python and other necessary tools
 RUN apk update && apk add --no-cache python3 py3-pip curl
 
-# The entrypoint will start the Docker daemon inside Container B
+# The entrypoint will start the Docker daemon inside Container B. dockerd-entrypoint.sh is the default EntryPoint, you can change it.
 ENTRYPOINT ["dockerd-entrypoint.sh"]
 
-# Run Container C with the environment variable MY_VAR set
+# Run Container C from B's Dockerfile.
 CMD ["sh", "-c", "docker run --privileged --rm -e MY_VAR_B='Hello from B!' dind-c-container"]
 
