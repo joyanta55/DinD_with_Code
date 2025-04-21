@@ -5,7 +5,7 @@ If you are from my Linked post, welcome back. Here, I will clear up the Docker i
 </p>
 
 ### Requirements
-Install and set rootless docker access. Which means if you can run 
+Install and set rootless docker access on your `Linux` machine. If you can run 
 
 ```
 docker run hello-world
