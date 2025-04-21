@@ -11,7 +11,7 @@ Install and set rootless docker access. Which means if you can run
 docker run hello-world
 ```
 
-without sudo, that means rootless docker access is enabled. Otherwise google how do do it. 
+without `sudo`, that means rootless docker access is enabled. Otherwise google how do do it. 
 
 ### Folder structure
 **Folder A**:
