@@ -56,3 +56,8 @@ docker run --privileged --rm --name dind-a-container -v /var/run/docker.sock:/va
 With the `-v` command, you are mounting `A`'s Docker socket directory (`/var/run/docker.sock`) to the host's Docker socket (`/var/run/docker.sock`). Then, `A` performs the same mounting for `B`'s Docker socket, allowing `B` to interact with the host's `Docker` daemon. `B` then does the same mounting with `C`'s Docker socket, enabling `C` to also communicate with the host's Docker daemon."
 
 This mechanism of chaining containers with Docker-in-Docker (DinD) can also be applied in a CI/CD pipeline. For example, a pipeline could use a similar setup to run tests, build images, and deploy containers across multiple stages, where each container in the chain performs a specific task (e.g., building, testing, deploying) and communicates with the host Docker daemon.
+
+**Output Log**
+```
+Container C: Hello from Python inside C! The value of MY_VAR_B is: Hello from B!
+```
